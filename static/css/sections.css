@@ -1,0 +1,45 @@
+section{
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+/* Section S1 */
+#s1{
+    font-family: 'Kalam', cursive;
+    color: #ffffff;
+    background-color: #00001e;
+}
+
+#s1 div{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+#s1 h1 {
+    font-size: 5vw;
+}
+
+#s1 .material-symbols-rounded{
+    font-size: 50px;
+}
+
+#s1 img{
+    float: left;
+    height: auto;
+    max-width: 50vw;
+}
+
+
+/* Section S2 */
+#s2{
+    background-color: pink;
+}
+
+/* Section S3 */
+#s3{
+    background-color: orange;
+}
