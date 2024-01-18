@@ -8,25 +8,71 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/sections.css">
     <title>Ansuman Dhar</title>
+    <script defer type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@latest/build/three.module.min.js",
+                "three/addons/": "https://unpkg.com/three@latest/examples/jsm/"
+            }
+        }
+    </script>
+    <!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script> -->
     <script defer src="./static/js/DOM.js"></script>
     <script defer src="./static/js/script.js"></script>
+    <script type="module" defer src="./static/js/s5.js"></script>
 </head>
 <body>
     <span id="down-button" class="material-symbols-rounded">keyboard_double_arrow_down</span>
-    <section id="s1">
+    <span id="home-button" class="material-symbols-rounded" onclick="window.scrollTo(0,0)">home</span>
+    <section id="s0">
         <img src="./assets/images/ansu(2).jpg" alt="">
         <div>
+            <h2>I am</h2>
             <h1>Ansuman Dhar</h1>
-            <span class="material-symbols-rounded" title="Male">male</span>
-            <span class="material-symbols-rounded" title="Love to code">code</span>
-            <span class="material-symbols-rounded" title="Love listening to music">music_note</span>
+            <h3>and I love</h3>
+            <div class="shortcuts">
+                <a class="material-symbols-rounded" href="#s1">code</a>
+                <a class="material-symbols-rounded" href="#s2">music_note</a>
+                <a class="material-symbols-rounded" href="#s3">edit_square</a>
+                <a class="material-symbols-rounded" href="#s4">travel</a>
+                <a class="material-symbols-rounded" href="#s5">rocket_launch</a>
+            </div>
         </div>
     </section>
     
+    <section id="s1">
+        Code
+    </section>
+    
     <section id="s2">
+        Music
     </section>
     
     <section id="s3">
+        Reading & Writing
+    </section>
+    
+    <section id="s4">
+        Aeronautics
+    </section>
+    
+    <section id="s5"><canvas></canvas></section>
+    
+    <section id="s6" style="position: absolute; z-index: 3">
+        <h1>Let's Get In Touch 🤝🏻</h1>
+        <button onclick="window.scrollTo(0,0)">Back Home ☝🏻</button>
+        <div>
+            <a href="mailto:ansuman.official100@gmail.com" target="_blank"><img src="./assets/images/socials/email.svg" alt="Instagram"></a>
+            <a href="https://discordapp.com/users/561439073366048780/" target="_blank"><img src="./assets/images/socials/discord.svg" alt="Discord"></a>
+            <a href="https://www.github.com/iamansuthecoda/" target="_blank"><img src="./assets/images/socials/github.svg" alt="Github"></a>
+            <a href="https://g.dev/iamansumandhar/" target="_blank"><img src="./assets/images/socials/google.svg" alt="Google for Devlopers"></a>
+            <a href="https://www.instagram.com/iamansuthecoda/" target="_blank"><img src="./assets/images/socials/instagram.svg" alt="Instagram"></a>
+            <a href="https://in.pinterest.com/ansumandhar/" target="_blank"><img src="./assets/images/socials/pintrest.svg" alt="Pintrest"></a>
+            <a href="https://www.reddit.com/u/Dangerous-Chapter-14/" target="_blank"><img src="./assets/images/socials/reddit.svg" alt="Reddit"></a>
+            <a href="https://soundcloud.com/ansuman-dhar/" target="_blank"><img src="./assets/images/socials/soundcloud.svg" alt="Soundcloud"></a>
+            <a href="https://open.spotify.com/user/8g9k3zobgd8blnszjwypf3bxq" target="_blank"><img src="./assets/images/socials/spotify.svg" alt="Soundcloud"></a>
+            <a href="https://stackoverflow.com/users/11481983/ansuman/" target="_blank"><img src="./assets/images/socials/stackoverflow.svg" alt="StackOverFlow"></a>
+        </div>
     </section>
 </body>
 </html>

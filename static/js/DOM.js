@@ -1,4 +1,11 @@
 const DOMELEMENTS = {
+    s0: document.getElementById('s0'),
+    s1: document.getElementById('s1'),
+    s2: document.getElementById('s2'),
+    s3: document.getElementById('s3'),
+    s4: document.getElementById('s4'),
+    s5: document.getElementById('s5'),
+    s6: document.getElementById('s6'),
     GROUP: {
         sections: document.getElementsByTagName('section'),
         downButtons: document.getElementsByClassName('down-button')
@@ -6,19 +13,4 @@ const DOMELEMENTS = {
     downButton: document.getElementById('down-button'),
 }
 
-document.addEventListener('scroll', (e) => {
-    for (i=0; i<DOMELEMENTS.GROUP.sections.length; i++) {
-        const rect = DOMELEMENTS.GROUP.sections[i].getBoundingClientRect();
-        if(rect.top > 0 && rect.top < 150) window.location.hash = `#${DOMELEMENTS.GROUP.sections[i].id}`;
-    }
-});
-
 DOMELEMENTS.downButton.addEventListener('click', () => window.scrollBy({ top: 10, behavior: 'smooth' }));
-
-// for(i=0; i<DOMELEMENTS.group.downButtons.length; i++){
-//     const downBtn = DOMELEMENTS.group.downButtons[i];
-//     downBtn.addEventListener('click', () => {
-//         window.scrollBy({top:10, behavior:'smooth'});
-//     });
-// }
-
