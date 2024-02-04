@@ -71,6 +71,19 @@ section{
     height: inherit;
 }
 
+#s5 button{
+    padding: 1em;
+    outline: none;
+    border: none;
+    border-radius: 0 0 1em 0;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+#s5 button:hover{
+    transform: translate(-5px, -5px);
+}
+
 /* Section S6 */
 #s6{
     background-color: #00001e;

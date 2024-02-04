@@ -81,6 +81,8 @@ loader.load('../../assets/3Dmodels/s5/ISS_stationary.glb', (gltf) => {
 }, undefined, (err) => console.error(err));
 
 //EventListeners
+DOMELEMENTS.reset3JSBtn.addEventListener('click', () => camera.position.set(0, 0, 1550));
+
 DOMELEMENTS.s5.addEventListener('mousemove', e => {
     if (e.clientX < (e.target.clientWidth/2) - 75) earth.rotationFactor = (e.clientX > 150) ? -0.003 : -0.1;
     else if (e.clientX > (e.target.clientWidth/2) + 75) earth.rotationFactor = (e.clientX < (e.target.clientWidth - 150)) ? 0.003 : 0.1;

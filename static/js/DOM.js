@@ -6,6 +6,7 @@ const DOMELEMENTS = {
     s4: document.getElementById('s4'),
     s5: document.getElementById('s5'),
     s6: document.getElementById('s6'),
+    reset3JSBtn: document.getElementById('threejs-reset-cam-pos'),
     GROUP: {
         sections: document.getElementsByTagName('section'),
         downButtons: document.getElementsByClassName('down-button')
