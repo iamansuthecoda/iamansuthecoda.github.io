@@ -1,7 +1,8 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader';
+const DRACOLoaderDecoderPath = 'https://unpkg.com/three@latest/examples/jsm/libs/draco/';
 
 const earth = {
     model: null,
@@ -25,9 +26,10 @@ const ISS = {
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, DOMELEMENTS.s5.clientWidth / DOMELEMENTS.s5.clientHeight, 1, 5000);
 const loader = new GLTFLoader();
-const renderer = new THREE.WebGLRenderer({
-    canvas: DOMELEMENTS.s5.getElementsByTagName('canvas')[0]
-});
+const dLoader = new DRACOLoader();
+dLoader.setDecoderPath(DRACOLoaderDecoderPath);
+loader.setDRACOLoader(dLoader);
+const renderer = new THREE.WebGLRenderer({ canvas: DOMELEMENTS.s5.getElementsByTagName('canvas')[0] });
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(DOMELEMENTS.s5.clientWidth, DOMELEMENTS.s5.clientHeight);
 
@@ -52,13 +54,13 @@ controls.target = new THREE.Vector3(0, 0, 0);
 const imgLoader = new THREE.TextureLoader();
 imgLoader.load('../../assets/images/s5/space.jpg', (texture) => { scene.background = texture });
 
-loader.load('../../assets/images/s5/Earth_1_12756.glb', (gltf) => {
+loader.load('../../assets/3Dmodels/s5/Earth_1_12756.glb', (gltf) => {
     earth.model = gltf.scene;
     earth.model.rotation.x = 0.25;
     scene.add(earth.model);
 }, undefined, (err) => console.error(err));
 
-loader.load('../../assets/images/s5/Moon_1_3474.glb', (gltf) => {
+loader.load('../../assets/3Dmodels/s5/Moon_1_3474.glb', (gltf) => {
     moon.model = gltf.scene;
     moon.model.castShadow = true;
     moon.model.scale.x = 0.25;
@@ -68,7 +70,7 @@ loader.load('../../assets/images/s5/Moon_1_3474.glb', (gltf) => {
     scene.add(moon.model);
 }, undefined, (err) => console.error(err));
 
-loader.load('../../assets/images/s5/ISS_stationary.glb', (gltf) => {
+loader.load('../../assets/3Dmodels/s5/ISS_stationary.glb', (gltf) => {
     ISS.model = gltf.scene;
     ISS.model.scale.x = 0.5;
     ISS.model.scale.y = 0.5;
